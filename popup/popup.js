@@ -48,13 +48,15 @@
     Handle trigger character input
     */
     const triggerCharInput = select("#triggerChar")
+    const trigCharInDescription = select("#descTrig")
+
     triggerCharInput.value = await getTriggerChar()
-    triggerCharInput.addEventListener('change', async (ev) => {
+    triggerCharInput.addEventListener('input', async (ev) => {
         await asyncSetChromeSyncStorage({
             'triggerChar': triggerCharInput.value
         })
+        trigCharInDescription.textContent = triggerCharInput.value  
     })
 
-    const trigCharInDescription = select("#descTrig")
     trigCharInDescription.textContent = triggerCharInput.value  
 })()
