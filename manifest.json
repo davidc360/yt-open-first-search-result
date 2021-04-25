@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Search Opener",
+    "version": "0.0.0.1",
+    "permissions": [
+        "*://*.youtube.com/*",
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "page": "background/background.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["script.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup/popup.html"
+    },
+    "web_accessible_resources": [
+        "helpers.js"
+    ]
+  }
