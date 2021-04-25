@@ -23,7 +23,12 @@ table{
 }
 
 #triggerChar {
-    width: 30px
+    width: 30px;
+    text-align: center;
+}
+
+p{
+    padding: 0 1em 
 }
 
 .title{

@@ -54,4 +54,7 @@
             'triggerChar': triggerCharInput.value
         })
     })
+
+    const trigCharInDescription = select("#descTrig")
+    trigCharInDescription.textContent = triggerCharInput.value  
 })()
